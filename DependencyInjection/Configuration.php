@@ -49,7 +49,7 @@ class Configuration implements ConfigurationInterface
                                                         return true;
                                                     }
 
-                                                    if (!in_array($type, $gateways)) {
+                                                    if (0 !== strpos($type, '\\') && !in_array($type, $gateways)) {
                                                         return true;
                                                     }
 
